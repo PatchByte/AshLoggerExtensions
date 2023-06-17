@@ -1,0 +1,6 @@
+[submodule "AshLoggerExtensionVendors/Ash"]
+	path = AshLoggerExtensionVendors/Ash
+	url = https://github.com/PatchByte/Ash.git
+[submodule "AshLoggerExtensionVendors/fmt"]
+	path = AshLoggerExtensionVendors/fmt
+	url = https://github.com/fmtlib/fmt.git
