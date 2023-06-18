@@ -2,7 +2,7 @@
 #include <AshLogger/AshLoggerPassage.h>
 #include <AshLogger/AshLogger.h>
 
-namespace ash
+namespace ash::passages
 {
 
     class SimpleLokiExtension : public AshLoggerDefaultPassage

@@ -7,7 +7,7 @@
 #include <vector>
 #include <chrono>
 
-namespace ash
+namespace ash::passages
 {
     static int64_t GetCurrentUnixEpochInNanoSeconds()
     {
