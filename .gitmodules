@@ -4,3 +4,9 @@
 [submodule "AshLoggerExtensionVendors/fmt"]
 	path = AshLoggerExtensionVendors/fmt
 	url = https://github.com/fmtlib/fmt.git
+[submodule "AshLoggerExtensionVendors/json"]
+	path = AshLoggerExtensionVendors/json
+	url = https://github.com/nlohmann/json.git
+[submodule "AshLoggerExtensionVendors/IXWebSocket"]
+	path = AshLoggerExtensionVendors/IXWebSocket
+	url = https://github.com/machinezone/IXWebSocket.git
