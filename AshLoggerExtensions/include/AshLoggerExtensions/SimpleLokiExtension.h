@@ -1,4 +1,5 @@
 #pragma once
+#if ASH_LOGGER_EXTENSIONS_ENABLE_GRAFANA_LOKI
 #include <AshLogger/AshLoggerPassage.h>
 #include <AshLogger/AshLogger.h>
 
@@ -18,3 +19,4 @@ namespace ash::passages
     };
 
 }
+#endif

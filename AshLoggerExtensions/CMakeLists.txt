@@ -15,4 +15,12 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/in
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
 
 # @todo do AshLogger options to enable certain parts
-target_link_libraries(${PROJECT_NAME} PUBLIC Ash::Ash AshLogger::AshLogger fmt::fmt nlohmann_json::nlohmann_json ixwebsocket::ixwebsocket)
+target_link_libraries(${PROJECT_NAME} PUBLIC Ash::Ash AshLogger::AshLogger fmt::fmt)
+
+if(ASH_LOGGER_EXTENSIONS_ENABLE_GRAFANA_LOKI)
+    target_link_libraries(${PROJECT_NAME} PUBLIC nlohmann_json::nlohmann_json ixwebsocket::ixwebsocket)
+endif(ASH_LOGGER_EXTENSIONS_ENABLE_GRAFANA_LOKI)
+
+if(ASH_LOGGER_EXTENSIONS_ENABLE_GRAFANA_LOKI)
+    target_compile_definitions(${PROJECT_NAME} PUBLIC ASH_LOGGER_EXTENSIONS_ENABLE_GRAFANA_LOKI=1)
+endif(ASH_LOGGER_EXTENSIONS_ENABLE_GRAFANA_LOKI)

@@ -12,7 +12,9 @@
 #include <fmt/format.h>
 
 static std::map<std::string, AshBaseSample*> smAshLoggerExtensionSamplesRegistered = {
+    #if ASH_LOGGER_EXTENSIONS_ENABLE_GRAFANA_LOKI
     { "LokiSample", new LokiSample() },
+    #endif
     { "ConsoleOutSample", new ConsoleOutSample() },
     { "FileOutSample", new FileOutSample() }
 };

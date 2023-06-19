@@ -25,6 +25,7 @@ Here is a list of a the few new `AshLoggerPassages`.
 |ASH_LOGGER_EXTENSIONS_ENABLE|Choose to enable this project.|  ON / OFF |
 |ASH_LOGGER_EXTENSIONS_ENABLE_DEVELOPMENT_ENVIRONMENT|Choose to enable this projects development environment (Should only used by myself.) | ON / OFF |
 |ASH_LOGGER_EXTENSIONS_ENABLE_SAMPLES|Choose to enable samples for this project.| ON / OFF |
+|ASH_LOGGER_EXTENSIONS_ENABLE_USAGE_OF_EXTERNAL_VENDORS|Choose to not use recursive submodules in this project, rather use already added submodules. | ON / OFF |
 
 ## Got any samples?
 Sure, [here](https://github.com/PatchByte/AshLoggerExtensions/tree/main/AshLoggerExtensionSamples/source/samples)

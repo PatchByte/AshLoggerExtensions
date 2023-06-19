@@ -1,4 +1,5 @@
 #include "AshLoggerExtensions/SimpleLokiExtension.h"
+#if ASH_LOGGER_EXTENSIONS_ENABLE_GRAFANA_LOKI
 #include <nlohmann/json.hpp>
 #include <ixwebsocket/IXHttpClient.h>
 #include <fmt/format.h>
@@ -64,3 +65,4 @@ namespace ash::passages
     }
 
 }
+#endif

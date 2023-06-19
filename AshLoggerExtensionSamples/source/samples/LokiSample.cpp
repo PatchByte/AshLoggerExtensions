@@ -1,6 +1,6 @@
 #include "LokiSample.h"
 #include "BaseLoggerSetup.h"
-
+#if ASH_LOGGER_EXTENSIONS_ENABLE_GRAFANA_LOKI
 #include <fmt/format.h>
 
 #include <AshLogger/AshLogger.h>
@@ -28,3 +28,4 @@ ash::AshResult LokiSample::Do(int argc, char* argv[])
     delete simpleLogger;
     return ash::AshResult(true, "Done.");
 }
+#endif

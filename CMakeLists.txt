@@ -4,6 +4,10 @@ project("AshLoggerExtensions-build")
 option(ASH_LOGGER_EXTENSIONS_ENABLE "Enable AshLogger extensions." OFF)
 option(ASH_LOGGER_EXTENSIONS_ENABLE_DEVELOPMENT_ENVIRONMENT "Enables a few specific tweaks to be able to develope AshLoggerExtensions" OFF)
 option(ASH_LOGGER_EXTENSIONS_ENABLE_SAMPLES "Enable a few AshLoggerExtension samples." OFF)
+option(ASH_LOGGER_EXTENSIONS_ENABLE_USAGE_OF_EXTERNAL_VENDORS "Enable the usages of external vendors." OFF)
+
+# Configurable vendor variables
+option(ASH_LOGGER_EXTENSIONS_ENABLE_GRAFANA_LOKI "Enable the Grafana Loki extension." OFF)
 
 if(ASH_LOGGER_EXTENSIONS_ENABLE)
     if(ASH_LOGGER_EXTENSIONS_ENABLE_DEVELOPMENT_ENVIRONMENT)
