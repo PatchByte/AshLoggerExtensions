@@ -46,18 +46,11 @@ namespace ash::passages
         return payload;
     }
 
-    static ix::HttpClient* CreateHttpClient()
-    {
-        ix::HttpClient* client = new ix::HttpClient();
-
-        return client;
-    }
-
     void SimpleLokiExtension::DoPassthrough(AshLoggerTag Tag, std::string Format, fmt::format_args Args, std::string FormattedString)
     {
         if(this->GetLoggerTagFilter().DoFilter(Tag.GetShortTag()) == false) { return; }
 
-        auto httpClient = CreateHttpClient();
+        auto httpClient = new ix::HttpClient();
         auto payload = CreateLokiPushPayload(this->GetParent()->GetLoggerName(), Tag, FormattedString);
 
         ix::HttpRequestArgsPtr clientArgs = httpClient->createRequest();
