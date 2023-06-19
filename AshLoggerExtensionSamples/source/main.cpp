@@ -1,8 +1,9 @@
 #include "main.h"
 #include "BaseSample.h"
 
-#include "samples/LokiSample.h"
 #include "samples/ConsoleOutSample.h"
+#include "samples/FileOutSample.h"
+#include "samples/LokiSample.h"
 
 #include <iostream>
 #include <map>
@@ -12,7 +13,8 @@
 
 static std::map<std::string, AshBaseSample*> smAshLoggerExtensionSamplesRegistered = {
     { "LokiSample", new LokiSample() },
-    { "ConsoleOutSample", new ConsoleOutSample() }
+    { "ConsoleOutSample", new ConsoleOutSample() },
+    { "FileOutSample", new FileOutSample() }
 };
 
 int main(int argc, char* argv[])
