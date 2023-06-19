@@ -27,5 +27,10 @@ Here is a list of a the few new `AshLoggerPassages`.
 |ASH_LOGGER_EXTENSIONS_ENABLE_SAMPLES|Choose to enable samples for this project.| ON / OFF |
 |ASH_LOGGER_EXTENSIONS_ENABLE_USAGE_OF_EXTERNAL_VENDORS|Choose to not use recursive submodules in this project, rather use already added submodules. | ON / OFF |
 
+
+|Name|Description|Values|
+|----|-----------|------|
+|ASH_LOGGER_EXTENSIONS_ENABLE_GRAFANA_LOKI|Enable the Grafana Loki extension. Does require JSON and IXWebSocket tho. | ON / OFF |
+
 ## Got any samples?
 Sure, [here](https://github.com/PatchByte/AshLoggerExtensions/tree/main/AshLoggerExtensionSamples/source/samples)
