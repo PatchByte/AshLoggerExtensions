@@ -12,6 +12,8 @@ namespace ash::passages
 
     void SimpleFileOutExtension::DoPassthrough(AshLoggerTag Tag, std::string Format, fmt::format_args Args, std::string FormattedString)
     {
+        if(this->GetLoggerTagFilter().DoFilter(Tag.GetShortTag()) == false) { return; }
+
         if(this->outputStream.bad() == false)
         {
             this->outputStream << fmt::format("{} {}", this->GetParent()->GetPrefixFunction()(Tag, Format, Args), FormattedString) << std::endl;

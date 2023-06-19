@@ -55,6 +55,8 @@ namespace ash::passages
 
     void SimpleLokiExtension::DoPassthrough(AshLoggerTag Tag, std::string Format, fmt::format_args Args, std::string FormattedString)
     {
+        if(this->GetLoggerTagFilter().DoFilter(Tag.GetShortTag()) == false) { return; }
+
         auto httpClient = CreateHttpClient();
         auto payload = CreateLokiPushPayload(this->GetParent()->GetLoggerName(), Tag, FormattedString);
 
