@@ -59,6 +59,8 @@ namespace ash::passages
         };
         std::string clientPayload = payload.dump(-1);
         ix::HttpResponsePtr response = httpClient->post(fmt::format("http://{}:{}/loki/api/v1/push", this->lokiEndpointHostname, this->lokiEndpointPort), clientPayload, clientArgs);
+    
+        (void)response;
     }
 
 }
